@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA id validator</title>
+    <link rel="stylesheet" type="text/css" href="./styling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monofett&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a class="header active">RSA Identity Validator App</a>
+
+        <a href="#back" class="reload">Reload Page</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
+    <div class="entry">
+        <section class="form">
+
+            <input type="text" class="name" value="" placeholder="Full Name">
+
+            <input type="text" class="id" value="" placeholder="Identity Number">
+
+            <hr>
+
+        </section>
+        <br><br>
+        <button class="query">Query...</button>
+        <div class="information">
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
