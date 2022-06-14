@@ -1,6 +1,6 @@
-var fullName = document.querySelector("name");
-var idNr = document.querySelector("id");
-var addBtn = document.querySelector("query");
+var fullName = document.querySelector(".name");
+var idNr = document.querySelector(".id");
+var addBtn = document.querySelector(".query");
 
 addBtn.addEventListener("click", addEntries);
 
@@ -8,7 +8,7 @@ addBtn.addEventListener("click", addEntries);
 
 function addEntries() {
     var idNumber = Number(idNr.value);
-
+// alert("Hl")
 
 
 
