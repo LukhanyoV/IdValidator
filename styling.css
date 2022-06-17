@@ -181,7 +181,7 @@ h2 {
 
 .entry{
     background-color:#C1B9F3;
-    height:60%;
+    height:65%;
     border-radius: 30pt;
     
 }
@@ -191,7 +191,8 @@ h2 {
     margin-right: auto;
     margin-left: auto;
     width:60%;
-    height: 80%;
+    height: 85%;
+    padding: 10px;
 }
 
 

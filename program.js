@@ -52,7 +52,7 @@ function addEntries() {
 
     // clear the result div
     // and put together a result message
-    console.log('South African ID Number:   ' + idNumber + '\nBirth Date:   ' + fullDate + '\nGender:  ' + gender + ' \tSA Citizen:  ' + citzenship);
+    alert('South African ID Number:   ' + idNumber + '\nBirth Date:   ' + fullDate + '\nGender:  ' + gender + ' \tSA Citizen:  ' + citzenship);
     // }
 
 
