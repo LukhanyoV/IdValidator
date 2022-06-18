@@ -94,7 +94,7 @@ h2 {
 }
 
 .topnav a:hover {
-    background-color: #C1B9F3;
+    /* background-color: #C1B9F3; */
     color: #f1f1f1;
     border-radius: 10pt;
 }
@@ -112,6 +112,7 @@ h2 {
     .topnav a:not(:first-child) {
         display: none;
     }
+    
 
     .topnav a.icon {
         float: right;
@@ -139,7 +140,7 @@ h2 {
         position: absolute;
         right: 0;
         top: 0;
-        background-color: #C1B9F3;
+        /* background-color: #f2f2f2; */
     }
 
     .widgets {
@@ -156,6 +157,14 @@ h2 {
 
 
 }
+.icon{
+    background-color: #DD2C90;
+    color:#f2f2f2;
+}
+.topnav a.active {
+    background-color:#457b9d;
+    color: white;
+  }
 
 .header {
     font-family: 'Monofett', cursive;
@@ -170,19 +179,23 @@ h2 {
     display: flex;
 }
 .query{
+    border-radius: 10pt;
+    background-color:#DD2C90;
     margin-left: 45%;
-    border-radius: 5pt;
-    width:10%;
-    height: 5%;
-    border-color: #5590B4;
-    background-color: azure;
-    border-style: double;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .entry{
     background-color:#C1B9F3;
-    height:65%;
+    height:80%;
     border-radius: 30pt;
+    /* border-style:inset; */
     
 }
 .information{
@@ -190,10 +203,51 @@ h2 {
     border-radius: 20pt;
     margin-right: auto;
     margin-left: auto;
-    width:60%;
-    height: 85%;
+    width:30%;
+    height: 70%;
     padding: 10px;
+    border-style: outset ;
 }
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-right: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #DD2C90;
+  }
+
+  .info{
+    background-color: #DD2C90;
+    border-radius: 3pt;
+    color: #f2f2f2;
+    width:150%;
+  }
+  @media screen and (max-width:980px){
+    .query{
+        margin-left: 25%;
+        /* margin-right: auto; */
+        width: 50%;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color:#DD2C90;
+    }
+    .information{
+        width:100%;
+    }
+    .form{
+        flex-wrap: wrap;
+        width: 50%;
+        margin-left: 27%;
+    }
+    
+
+  } 
 
 
+ 
 /* Responsive columns - one column layout (vertical) on small screens */

@@ -2,6 +2,14 @@ var fullName = document.querySelector(".name");
 var idNr = document.querySelector(".id");
 var addBtn = document.querySelector(".query");
 
+var theName = document.querySelector(".f-name");
+var dob = document.querySelector(".dob");
+var age = document.querySelector(".age");
+var gender1 = document.querySelector(".gender");
+var Citizen = document.querySelector(".Citizen");
+
+
+
 addBtn.addEventListener("click", addEntries);
 
 
@@ -53,7 +61,25 @@ function addEntries() {
     // clear the result div
     // and put together a result message
     alert('South African ID Number:   ' + idNumber + '\nBirth Date:   ' + fullDate + '\nGender:  ' + gender + ' \tSA Citizen:  ' + citzenship);
+
+
     // }
+        // Below one is the single line logic to calculate the no. of years...
+        var years = new Date(new Date() - new Date(fullDate)).getFullYear() - 1970;
+
+    theName.innerHTML=fullName.value;
+    theName.classList.add("info");
+    dob.innerHTML= fullDate;
+    dob.classList.add("info");
+    gender1.innerHTML=gender;
+    gender1.classList.add("info");
+    Citizen.innerHTML=citzenship;
+    Citizen.classList.add("info");
+    age.innerHTML=years;
+    age.classList.add("info");
+
+
+
 
 
 
