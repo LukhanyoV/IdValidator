@@ -7,6 +7,8 @@ var dob = document.querySelector(".dob");
 var age = document.querySelector(".age");
 var gender1 = document.querySelector(".gender");
 var Citizen = document.querySelector(".Citizen");
+var error = document.querySelector(".errors");
+var errors;
 
 
 
@@ -15,34 +17,31 @@ addBtn.addEventListener("click", addEntries);
 
 
 function addEntries() {
-    var idNumber = Number(idNr.value);
-// alert("Hl")
+    var idNumber = idNr.value;
+
 
 
 
     // SA ID Number have to be 13 digits, so check the length
     if (idNumber.length != 13 || !isNumber(idNumber)) {
-        error = 'ID number does not appear to be authentic - input not a valid number';
+        errors = 'ID number does not appear to be authentic - input not a valid number';
         correct = false;
     }
 
     // get first 6 digits as a valid date
     const yr = idNr.value.substring(0, 2);
     var tempDate = new Date(yr, idNumber.toString().substring(2, 4) - 1, idNumber.toString().substring(4, 6));
-    console.log({ yr }, '-----', Number(yr) + 2000, { tempDate }) // 01 - 2001 = 1901
-    // yr 00 and 30 + 100
-
+   
     var id_date = Number(tempDate.getDate());
     var id_month = Number(tempDate.getMonth());
     var id_year = Number(tempDate.getFullYear()) > 1940 ? Number(tempDate.getFullYear()) : Number(yr) + 2000;
     // var fullDate = id_date + "-" + (id_month + 1) + "-" + id_year;
     var fullDate = id_year + "-" + (id_month + 1) + "-" + id_date;
 
-    console.log({ id_year }, 'ii');
-    // var fullDate=Number(fullDate1)
+  
 
     if (!((tempDate.getYear() == idNumber.toString().substring(0, 2)) && (id_month == idNumber.toString().substring(2, 4) - 1) && (id_date == idNumber.toString().substring(4, 6)))) {
-        error = 'ID number does not appear to be authentic - date part not valid';
+        errors = 'ID number does not appear to be authentic - date part not valid';
         correct = false;
     }
 
@@ -53,17 +52,7 @@ function addEntries() {
     //get country ID for citzenship
     var citzenship = parseInt(idNumber.toString().substring(10, 11)) == 0 ? "Yes" : "No";
 
-    console.log(citzenship, correct)
-
-    // if no error found, hide the error message
-    // if (correct) {
-
-    // clear the result div
-    // and put together a result message
-    alert('South African ID Number:   ' + idNumber + '\nBirth Date:   ' + fullDate + '\nGender:  ' + gender + ' \tSA Citizen:  ' + citzenship);
-
-
-    // }
+    
         // Below one is the single line logic to calculate the no. of years...
         var years = new Date(new Date() - new Date(fullDate)).getFullYear() - 1970;
 
@@ -77,6 +66,7 @@ function addEntries() {
     Citizen.classList.add("info");
     age.innerHTML=years;
     age.classList.add("info");
+    error.innerHTML=errors;
 
 
 
@@ -86,6 +76,9 @@ function addEntries() {
  
   
 
+}
+function isNumber(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
 
