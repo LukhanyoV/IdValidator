@@ -36,7 +36,7 @@ function addEntries() {
     var id_month = Number(tempDate.getMonth());
     var id_year = Number(tempDate.getFullYear()) > 1940 ? Number(tempDate.getFullYear()) : Number(yr) + 2000;
     // var fullDate = id_date + "-" + (id_month + 1) + "-" + id_year;
-    var fullDate = id_year + "-" + (id_month + 1) + "-" + id_date;
+    var fullDate = id_year + "-" + ((id_month + 1) < 10 ? "0"+(id_month + 1):(id_month + 1)) + "-" + id_date;
 
   
 
