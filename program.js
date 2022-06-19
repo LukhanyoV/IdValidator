@@ -8,7 +8,7 @@ var age = document.querySelector(".age");
 var gender1 = document.querySelector(".gender");
 var Citizen = document.querySelector(".Citizen");
 var error = document.querySelector(".errors");
-var errors;
+var errors="";
 
 
 
@@ -68,13 +68,6 @@ function addEntries() {
     age.classList.add("info");
     error.innerHTML=errors;
 
-
-
-
-
-
- 
-  
 
 }
 function isNumber(n) {

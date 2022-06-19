@@ -276,7 +276,7 @@ input[type=text] {
   }
   .icon{
     background-color: aliceblue;
-    color:#333;
+    
   }
   
   @media screen and (max-width: 760px) {
